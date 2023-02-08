@@ -1,11 +1,11 @@
 <?php 
 
 require "../partials/head.php";
-// require "../partials/nav.php";
+require "../../models/movie.create.model.php";
 ?>
 
 <div class="mx-96">
-        <form class="bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post">
+        <form class="bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST">
         <p class="text-center text-red-700 text-lg font-bold">CREATE MOVIE</p>
             <div class="mb-4">
                 <label class="block text-red-700" for="title">Movie Title</label>
@@ -25,22 +25,10 @@ require "../partials/head.php";
                     <option value="korean" name="korean">Korean</option>
                 </select>
             </div>
-
-            <div class="mb-4 text-white ">           
-                <label class="block text-red-700" for="subtitle" name="subtitle">Subtitle:</label>
-                <div class="text-sm">
-                
-                    <input type="checkbox" id="vehicle1" name="english" value="English">
-                    <label for="vehicle1"> English </label><br>
-                    <input type="checkbox" id="vehicle2" name="franch" value="Franch">
-                    <label for="vehicle2">  Franch</label><br>
-                    <input type="checkbox" id="vehicle3" name="chinese" value="Chinese">
-                    <label for="vehicle3"> Chinese </label>
-                </div>          
-            </div>
-
             <div class="mb-4 text-red-700">             
-                <label class="block text-red-700" for="duration" name="duration">Duration : 90mn</label>
+                <label class="block text-red-700" for="duration" name="duration">Duration : </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Movie Duration" name="duration">
+
             </div>
 
             <div class="mb-4">
@@ -55,13 +43,39 @@ require "../partials/head.php";
 
             <div class="mb-4">
                 <label class="block text-red-700" for="image">Image</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="image url" name="image">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Image URL" name="image">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-red-700" for="image">Start Date</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Movie Start Date" name="image">
             </div>
 
+            <div class="mb-4">
+                <label class="block text-red-700" for="image">End Date</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Movie End Date" name="image">
+            </div>
 
+            <div class="mb-4">
+                <label class="block text-red-700" for="image">Format</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Format(Ex: 2D,..)" name="image">
+            </div>
+
+            <div class="mb-4 text-white ">           
+                <label class="block text-red-700" for="subtitle" name="subtitle">Subtitle:</label>
+                <div class="text-sm flex gap-4">
+                
+                    <input type="radio" id="vehicle1" name="subtitle" value="English" checked="checked">
+                    <label for="vehicle1"> English </label><br>
+                    <input type="radio" id="vehicle2" name="subtitle" value="Franch">
+                    <label for="vehicle2">  Franch</label><br>
+                    <input type="radio" id="vehicle3" name="subtitle" value="Chinese">
+                    <label for="vehicle3"> Chinese </label>
+                </div>
+            </div>
 
             <div class="flex items-center justify-between">
-                <button class="bg-black hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" name="cancel">
+                <button class="ront-bold bg-gradient-to-r from-black via-gray-600 to-black hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" name="cancel">
                     Cancel
                 </button>
                 <button class="ront-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" name="create">
