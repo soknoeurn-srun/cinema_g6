@@ -48,17 +48,17 @@ require "../../models/movie.create.model.php";
             
             <div class="mb-4">
                 <label class="block text-red-700" for="image">Start Date</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Movie Start Date" name="image">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Movie Start Date" name="startDate">
             </div>
 
             <div class="mb-4">
                 <label class="block text-red-700" for="image">End Date</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Movie End Date" name="image">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Movie End Date" name="endDate">
             </div>
 
             <div class="mb-4">
                 <label class="block text-red-700" for="image">Format</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Format(Ex: 2D,..)" name="image">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input Format(Ex: 2D,..)" name="format">
             </div>
 
             <div class="mb-4 text-white ">           
