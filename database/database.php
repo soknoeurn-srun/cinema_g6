@@ -1,7 +1,7 @@
 <?php
 
 $hostname = "localhost";
-$database = "cinema_g6";
+$database = "hello";
 $username = "root";
 $password = "";
 

@@ -1,11 +1,10 @@
 <?php 
-
-require "../partials/head.php";
-require "../../models/movie.create.model.php";
+require "views/partials/head.php";
+require "views/partials/nav.php";
 ?>
 
 <div class="mx-96">
-        <form class="bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST">
+        <form action="/seller" class="bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST">
         <p class="text-center text-red-700 text-lg font-bold">CREATE MOVIE</p>
             <div class="mb-4">
                 <label class="block text-red-700" for="title">Movie Title</label>
@@ -78,7 +77,7 @@ require "../../models/movie.create.model.php";
                 <button class="ront-bold bg-gradient-to-r from-black via-gray-600 to-black hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" name="cancel">
                     Cancel
                 </button>
-                <button class="ront-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" name="create">
+                <button class="ront-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit " name="create">
                     Create
                 </button>           
             </div>

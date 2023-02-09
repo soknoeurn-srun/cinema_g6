@@ -2,9 +2,10 @@
 //  require "controllers/seller/seller.create.controller.php";
  require "views/partials/head.php";
  require "views/partials/nav.php";
+ print_r($_GET['PATH_INFO']);
 ?>
 
-<a href="views/seller/seller.form.view.php"><button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+<a href="/create-seller"><button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
   Add Movie
 </button></a>
 

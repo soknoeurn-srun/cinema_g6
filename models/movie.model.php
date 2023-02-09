@@ -23,6 +23,7 @@ function getPost(int $id) : array
     return $statement->fetch();
 }
 
+
 function getPosts() : array
 {
     global $connection;
@@ -36,4 +37,25 @@ function getMovie() : array
     $statement = $connection->query("SELECT * FROM movies");
     $movieItems = $statement->fetchAll();
     return $movieItems;
+}
+function getLatesMovie() : array
+{
+    global $connection;
+    $statement = $connection->query("SELECT * FROM movies ORDER BY movie_id DESC LIMIT 1");
+    return $statement->fetch();
+}
+function createMovies( string $title) : bool
+{
+    global $connection;
+    $statment = $connection -> prepare("INSERT INTO movies(title) VALUES (:title)");
+    // $statment -> execute([
+    //     ':title' => $title,
+    //     // ':description' => $description,
+    //     // ':language' => $language,
+    //     // ':releast_date' => $releast_date,
+    //     // ':duration' => $duration,
+    //     // ':picture' => $picture
+    // ]);
+    $statment->bindParam(':title', $title);
+    return $statment->rowCount() > 0;
 }

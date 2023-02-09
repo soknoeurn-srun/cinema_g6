@@ -1,6 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
 
-<?php
+
 require "views/partials/head.php";
 
 require "views/partials/nav.php";
