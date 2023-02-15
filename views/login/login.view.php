@@ -54,14 +54,14 @@
   </div>
   <div class="text-center">
       <div class="relative z-0 w-full mb-6 group">
-        <button class="ront-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center">
+        <button class="ront-bold font-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-900 hover:text-black text-white py-2 px-40 rounded inline-flex items-center">
           SIGN IN
         </button>
       </div>
   </div>
   <p class="text-sm font-light text-white">
     Don’t have an account yet? <a href="/register"
-      class="font-medium text-red-600 hover:underline dark:text-primary-500">Sign up</a>
+      class="font-medium font-bold text-red-600 hover:underline dark:text-primary-500">Sign up</a>
   </p>
 
 </form>

@@ -1,10 +1,11 @@
-<?php session_start(); ?>
-<?php require "views/partials/head.php" ?>
-<?php require "views/partials/nav.php" ?>
-<?php if(empty($_SESSION['user_type'])){
+
+<?php session_start();
+require "views/partials/head.php";
+require "views/partials/nav.php";
+if(empty($_SESSION['user_type'])){
   require "views/partials/banner.php";
-} ?>
-<?php require "database/database.php" ?>
+};
+require "database/database.php" ?>
 
 
 <div class="mb-10 grid grid-cols-5 ml-8">
@@ -32,9 +33,11 @@
                         class="text-white font-bold p-2 border-red-600 border-2 text-white text-sm w-30 rounded-md hover:bg-red-600 transition-all">
                         <?php if(empty($_SESSION['user_type'])){echo "See More";}else {if($_SESSION['user_type'] == "admin"){echo "Product Detail";}else{echo "See More";};} ?>
                         </button></a>
-                    <a href="https://majorcineplex.com.kh/home"><button id="button-card"
-                        class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">Buy Now
-                    </button></a>
+                        <a href="/detail?id=<?php echo $movie['movie_id']?>">
+                        <button id="button-card"
+                            class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">Buy Now
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -46,13 +49,10 @@
         </div>
     </div>
 
-
-
-
-
     <?php
     }
-?>
+    ?>
 </div>
+
 
 <?php require "views/partials/footer.php" ?>

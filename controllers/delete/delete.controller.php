@@ -2,6 +2,7 @@
 session_start();
 require 'database/database.php';
 require 'models/delete.model.php';
+// require 'seller.view.php';
 
 
 if (isset($_GET['id'])) {
@@ -9,5 +10,8 @@ if (isset($_GET['id'])) {
   deleteMovie($id);
 }
 
-
-header("Location: /movie");
+if ($user["user_type"] == 'admin'){
+  header('location:/movie');
+}else{
+  header('location:/seller');
+}

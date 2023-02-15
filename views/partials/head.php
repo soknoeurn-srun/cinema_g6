@@ -12,7 +12,9 @@
 
     <script src="../path/to/flowbite/dist/datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/datepicker.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
 </head>
 <body class="bg-gradient-to-r from-black via-red-600 to-black min-h-screen">
+<!-- <body class="ront-bold bg-stone-900 from-black via-red-600 to-black "> -->
 

@@ -17,7 +17,7 @@ else{
     $format = $_POST['format'];
     $subtitle = $_POST['subtitle'];
     $createSeller  = createMovies($title, $description, $language, $duration, $release_date, $image);
-    $createSellers  = getLatesMovie();
+    // $createSellers  = getLatesMovie();
     print_r($createSeller);
 }
 
